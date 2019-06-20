@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" href="libs/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/center.css"/>
+	</head>
+	<body>
+		<header class="margin">
+			<a href="#" class="logo"><img src="img/1.PNG"/></a>
+			<div class="h-c">
+				<span id="index" >
+					首页
+				</span>
+				<span id="position">
+					社招职位
+				</span>
+				<span id="about">
+					关于网易
+				</span>
+				<span id="center" class="s1">
+					个人中心
+				</span>
+			</div>
+			<div class="h-r">
+				<a href="login.html" class="login">登录</a>
+				<span>/</span>
+				<a href="regs.html" class="regs">注册</a>
+				<a href="" class="out">退出</a>
+			</div>
+		</header>
+		<section id="main" class="clear">
+			<ul>
+				<li class="active">应聘记录</li>
+				<li>我的简历</li>
+			</ul>
+			<div class="div">
+				<table class="table thead-default table-bordered">
+			            <thead>
+			                <tr>
+			                    <th>职位名称</th>
+			                    <th>职位类别</th>
+			                    <th>工作地点</th>
+			                    <th>应聘状态</th>
+			                    <th>投递时间</th>
+			                </tr>
+			            </thead>
+			            <tbody>
+			                <!-- <tr>
+			                    <td>data</td>
+			                    <td>data</td>
+			                    <td>data</td>
+			                    <td>data</td>
+			                    <td><span class="btn bg-info">删除</span></td>
+			                    <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">修改</button></td>
+			                </tr> -->
+			            </tbody>
+			        </table>
+			</div>
+		</section>
+		<footer>
+			<div class="f">
+				<a href="#">校园招聘</a>
+				<span>|</span>
+				<a href="#">有道招聘</a>
+				<span>|</span>
+				<a href="#">游戏社会招聘</a>
+				<span>|</span>
+				<a href="#">游戏校园招聘</a>
+				<span>|</span>
+				<a href="#">游戏运营招聘</a>
+				<span>|</span>
+				<a href="#">游戏美术招聘</a>
+				<p>©1997- 2019 网易公司版权所有</p>
+				<span>|</span>
+				<p>意见反馈：hr163_service@163.com</p>
+			</div>
+		</footer>
+	</body>
+	<script type="text/javascript" src="js/ajax.3.0.js"></script>
+	<script type="text/javascript" src="js/cookie.js"></script>
+	<script src="js/center.js"></script>
+	<script>
+	    var oI = document.getElementById("index");
+		var oP = document.getElementById("position");
+		var oAbout = document.getElementById("about");
+		var oC = document.getElementById("center");
+		var oLi = document.querySelectorAll("li")[1];
+		var login = document.querySelector(".login");
+	    var regs = document.querySelector(".regs");
+	    var out = document.querySelector(".out");
+		if(getCookie("user") == ""){
+			login.innerHTML = "登录";		
+			out.style.display = "none";
+		}else{
+			login.innerHTML = getCookie("user");	
+			regs.style.display = "none";
+		}
+		out.onclick = function(){
+			removeCookie("user",1,1)
+		}
+		oI.onclick = function(){
+			location.href = "index.html"
+		}
+		oP.onclick = function(){
+			location.href = "position.html"
+		}
+		oAbout.onclick = function(){
+			location.href = "about.html"
+		}
+		oC.onclick = function(){
+			if(getCookie("user") != ""){
+				location.href = "center.html"			
+			}else{
+				location.href = "login.html";
+			}
+		}
+		oLi.onclick = function(){
+			location.href = "resume.html"
+		}
+	</script>
+</html>

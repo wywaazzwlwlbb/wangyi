@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+    	.box{width: 500px;height: 350px;margin:auto;background: rgba(0,0,0,.1);overflow: hidden;}
+    	h1{text-align: center;}
+    	form{width:430px;margin: auto;}
+    	input{margin: 15px 0;}
+        #btn{margin-left: 30px;border: none;background: #C3E6CB;width: 50px;height: 30px;box-shadow: 0px 0px 5px #CCC;}
+    	#login{margin-left: 250px;border: none;background: #C3E6CB;width: 50px;height: 30px;box-shadow: 0px 0px 5px #CCC;}    	
+        #msg{display:none;position: absolute;left: 600px;top: 80px;width: 150px;height: 150px;background: rgba(0,0,0,.1);text-align: center;line-height: 150px;}
+    </style>
+</head>
+<body>
+	<div class="box">
+		<h1>注册</h1>
+		<form action="" method="post">
+		    用户名：<input type="text" id="user"><span></span><br>
+		    密码：<input type="text" id="pass"><span></span><br>
+		    重复密码：<input type="text" id="pass2"><span></span><br>
+		    <input type="button" id="btn" value="注册">
+		    <span id="msg"></span>
+		    <input type="button" id="login" value="登录" />
+		</form>
+	</div>
+</body>
+<script src="js/ajax.3.0.js"></script>
+<script src="js/cookie.js"></script>
+<script type="text/javascript" src="js/regs.js"></script>
+<script>
+    var ouser = document.getElementById("user");
+    var opass = document.getElementById("pass");
+    var login = document.getElementById("login");
+    var opass2 = document.getElementById("pass2");
+    var obtn = document.getElementById("btn");
+    login.onclick = function(){
+    	location.href = "login.html";
+    }
+    ouser.onblur = function(){
+        var reg = /^[\u2E80-\u9FFF\w\-]{4,20}$/;
+        if(reg.test(this.value)){
+            this.nextElementSibling.innerHTML = "正确";
+        }else{
+            this.nextElementSibling.innerHTML = "格式错误"
+        }
+    }
+
+    opass.onblur = function(){
+        var a=b=c=0;
+        var numReg = /\d+/;
+        if(numReg.test(this.value)) a = 1;
+        var azReg = /[a-zA-Z]+/;
+        if(azReg.test(this.value)) b = 1;
+        var tsReg = /[\~\!\@\#\$\%\^\&\*\(\)\_\+\`\-\=\{\}\[\]\\|\;\'\:\"\,\.\/\<\>\?]+/;
+        if(tsReg.test(this.value)) c = 1;
+        switch(a+b+c){
+            case 1:this.nextElementSibling.innerHTML = "简单";break;
+            case 2:this.nextElementSibling.innerHTML = "一般";break;
+            case 3:this.nextElementSibling.innerHTML = "困难";break;
+            default:
+                this.nextElementSibling.innerHTML = "至少输入数字字母或特殊字符";
+        }
+        if(opass2.value === this.value){
+            opass2.nextElementSibling.innerHTML = "正确"
+        }else{
+            opass2.nextElementSibling.innerHTML = "密码不一致"
+        }
+    }
+
+    opass2.onblur = function(){
+        if(opass.value === this.value){
+            this.nextElementSibling.innerHTML = "正确"
+        }else{
+            this.nextElementSibling.innerHTML = "密码不一致"
+        }
+    }
+
+</script>
+</html>

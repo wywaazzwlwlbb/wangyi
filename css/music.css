@@ -1,0 +1,25 @@
+body{margin: 0;padding: 0;}
+#banner{height:580px;background: url("https://hr.163.com/zc/9-yunyinyue/banner.jpg");background-position: center;}
+#banner .b1{position: relative;top: 60px;max-width: 1330px;height: 293px;margin: 0 auto;background-image: url("https://hr.163.com/zc/9-yunyinyue/title.png");background-repeat: no-repeat;}
+#main{width: 1189px;margin: 54px auto 125px;}
+#main ul.u{border-bottom: 1px solid #dad9db;height: 65px;margin-bottom: 55px;}
+#main ul.u li{float: left;width: 120px;height: 64px;margin-right: 80px;font-size: 30px;color: #666;cursor: pointer;}
+#main ul.u li:hover{color: #000;}
+#main ul.u li.active{color: #ea2000;border-bottom: 4px solid #ea2000;position: relative;bottom: 3px;}
+#main .div:nth-child(2) p{font: 18px/36px "";color: #333;margin: 13px 0;}
+#main .div:nth-child(3){display: none;}
+#main .div .u1{float:left;width: 275px;}
+#main .div .u1 li{text-indent: 40px;border: 1px solid #e1e8ed;color: #666;}
+#main .div .u1 .l1{height: 66px;font:22px/65px "";background: #f2f2f2;}
+#main .div .u1 .l2{height: 312px;font:24px/108px "";border-top: 0;}
+#main .div .u1 .l3{height: 159px;font:24px/108px "";border-top: 0;}
+#main .div .u1 .l4{height: 108px;font:24px/108px "";border-top: 0;}
+#main .div .u2{float:left;width: 913px;}
+#main .div .u2 li{text-indent: 40px;border: 1px solid #e1e8ed;color: #666;}
+#main .div .u2 .l1{height: 66px;font:22px/65px "";background: #f2f2f2;}
+#main .div .u2 .l2{height: 312px;font:24px/51px "";border-top: 0;border-left: 0;}
+#main .div .u2 a{display: block;}
+#main .div .u2 a:hover{color: #000;}
+#main .div .u2 .a1{padding-top:28px ;}
+#main .div .u2 .l3{height: 159px;font:24px/51px "";border-top: 0;border-left: 0;}
+#main .div .u2 .l4{height: 108px;font:24px/51px "";border-top: 0;border-left: 0;}

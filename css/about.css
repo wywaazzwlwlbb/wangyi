@@ -1,0 +1,60 @@
+.margin{width: 1180px;margin: auto;}
+header{height: 50px;}
+header .logo{float:left;line-height: 50px;}
+header .h-c{float: left;margin-left: 40px;line-height: 48px;}
+header .h-c span{margin: 0 20px;cursor: pointer;font-size: 16px;}
+header .h-c span.s1{font-weight:bold;color: rgb(194,40,48);}
+header .h-r{float: right;line-height: 50px;}
+#main{height: 900px;box-shadow: 0px -8px 5px -8px #CCC;}
+#main .ul{width: 315px;margin-top:40px;float: left;text-align: center;}
+#main .ul .l1{font: 16px/56px "";color: #666;}
+#main .ul .l1:hover{color: #000;cursor: pointer;}
+#main .ul .l1.active{font-weight:800 ;color: #000;}
+#main .div{display:none;}
+#main .div:nth-child(2){display: block;float: left;width: 930px;background: rgb(251,251,251);margin-top: 20px;height: 850px;}
+#main .div img.img{display:block;margin: 20px 0 0 90px;}
+#main .div .l{float:left;width: 335px;margin-left: 90px;}
+#main .div .l p{margin-top:35px;font: 14px/22px "";color: #666;}
+#main .div .r{float: left;margin-left: 75px;width: 335px;}
+#main .div .r p{margin-top:35px;font: 14px/22px "";color: #666;}
+#main .div .r span{display:block;margin-top:35px;font: 800 17px/26px ""}
+#main .div:nth-child(3){float: left;width: 930px;margin-top: 20px;height: 850px;}
+#main .div img.img{margin: 20px 0 0 90px;}
+#main .div p.p{width: 750px;margin: 40px 0 0 90px;font: 14px/22px "";}
+#main .div .m-l{float:left;margin: 76px 5px 0 90px;width: 195px;}
+#main .div .m-l img{margin-right: 5px;margin-top: 5px;}
+#main .div .m-l .i1{width: 195px;height: 200px;}
+#main .div .m-r{float: left;margin-top:76px ;width: 560px;}
+#main .div .m-r img{margin-top: 5px;}
+#main .div .m-r .i1{width: 269px;height: 130px;}
+#main .div:nth-child(4){float: left;width: 930px;margin-top: 20px;height: 850px;}
+#main .div .m-c{height: 53px;margin: 43px 0 73px 0;}
+#main .div .m-c p.p1{line-height: 22px;color: #666;}
+#main .div .m-c span.s1{display: block;line-height: 22px;color: #666;margin-left: 650px;}
+#main .div .m-b{height: 336px;padding: 12px 82px 16px 86px;background: url("https://hr.163.com/static/images/life-bg_6a69b52.jpg");}
+#main .div .m-b li{float: left;width: 184px;height: 164px;margin: 4px 0 0 4px;position: relative;}
+#main .div .m-b li img{width: 100%;height: 100%;}
+#main .div .m-b li .l2{display:none;position: absolute;top: 0;bottom: 0;left:0;right:0;background: rgba(0,0,0,.6);cursor: pointer;}
+#main .div .m-b li:hover .l2{display: block;}
+#main .div .m-b li .l2 p{font: 800 20px/184px "";color: #fff;text-align: center;}
+#main .div .m-b li .l2 span{width: 44px;height: 2px;background: red;display: block;position: absolute;left: 70px;bottom: 55px;}
+#main .div:nth-child(5){float: left;width: 930px;margin-top: 20px;height: 850px;}
+#main .div p.p2{width: 745px; height: 40px;margin: 45px 0 0 90px;font: 14px/22px "";color: #666;}
+#main .div .l3{}
+#main .div .l3 li{height: 164px;margin-top: 50px;}
+#main .div .l3 li .l5{position: relative;width: 184px;height: 164px;margin-left:90px ;float: left;}
+#main .div .l3 li .l2{display:none;position: absolute;top: 0;bottom: 0;left:0;right:0;background: rgba(0,0,0,.6);cursor: pointer;}
+#main .div .l3 li:hover .l2{display: block;}
+#main .div .l3 li .l2 p{font: 800 20px/184px "";color: #fff;text-align: center;}
+#main .div .l3 li .l2 span{width: 44px;height: 2px;background: red;display: block;position: absolute;left: 70px;bottom: 55px;}
+#main .div .l3 li .new{float:left;margin-left:35px ;width: 528px;}
+#main .div .l3 li .new h3{padding: 0 10px;font-weight: bold;font-size: 18px;color: #c22830; border-left: 3px solid #c22830;}
+#main .div .l3 li .new p{font: 14px/22px "";margin-top: 20px;color: #666;}
+footer{height: 100px;text-align: center;}
+footer .f{margin:20px auto;line-height: 32px;width: 535px;}
+footer .f a{color: #666;font-size: 12px;text-decoration: none;}
+footer .f a:hover{color:#BD2130;}
+footer .f span{color: #999;}
+footer .f p{display: inline-block;color: #999;}
+#box{width: 30px;height: 30px;border:1px solid rgba(0,0,0,.3) ;position: absolute;right: 20px;bottom: 10px;background: #BD2130;z-index: 2;
+     line-height:30px;text-align: center;cursor: pointer;}

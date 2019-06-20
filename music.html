@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/music.css"/>
+	</head>
+	<body>
+		<section id="banner">
+			<div class="b1"></div>
+		</section>
+		<section id="main" class="clear">
+				<ul class="u">
+					<li class="l active">产品介绍</li>
+					<li class="l">热招职位</li>
+				</ul>
+				<div class="div">
+					<p>网易云音乐是一款专注于发现与分享的音乐产品，拥有活跃的社交氛围，为用户打造全新的音乐生活。</p>
+					<p>2013年4月，网易云音乐正式上线；2015年7月，用户数突破1亿；2016年7月，用户数突破2亿；</p>
+					<p>2017年4月，网易云音乐发布四周年，用户数突破3亿，也宣布公司完成A轮融资。</p>
+					<p>正式发布至今，网易云音乐已覆盖iPhone、Android、Web、PC、iPad、WP、Mac、
+						Apple Watch、Win 10 UWP、Linux等十大平台，
+						是市面上增速第一、口碑第一的音乐产品。
+						精准的个性化推荐、千万高品质歌曲、千位大牌艺人、海量歌单内容、高质量乐评氛围，
+						成为网易云音乐的独家优势，并助其成为中国最大的音乐社交平台。
+						推出四年，网易云音乐用户数实现了从0到3亿的跨越式突破。
+					</p>
+					<p>如今的网易云音乐，仍然是音乐行业中最年轻的产品之一，有无限的上升空间，
+						处于高速发展的阶段。 现在加入云音乐的你，可以和我们一起，用音乐影响亿万人！
+					</p>
+				</div>
+				<div class="div">
+					<ul class="u1">
+						<li class="l1">类别</li>
+						<li class="l2">产品类</li>
+						<li class="l3">设计类</li>
+						<li class="l4">其他</li>
+					</ul>
+					<ul class="u2">
+						<li class="l1">职位列表</li>
+						<li class="l2">
+							<a href="#" class="a1">资深产品经理/专家（会员方向）</a>
+							<a href="#">资深产品经理/专家（广告方向）</a>
+							<a href="#">资深产品经理/专家（电商方向）</a>
+							<a href="#">资深产品经理（社区内容方向）</a>
+							<a href="#">资深产品经理（后台数据方向）</a>
+						</li>
+						<li class="l3">
+							<a href="#" class="a1">资深交互设计师</a>
+							<a href="#">资深视觉设计师</a>
+						</li>
+						<li class="l4">
+							<a href="#" class="a1">网易云音乐客服专员</a>
+						</li>
+					</ul>
+				</div>
+		</section>
+	</body>
+	<script type="text/javascript">
+		var ali = document.getElementsByClassName("l");
+	    var odiv = document.getElementsByClassName("div");
+	    console.log(ali);
+	    console.log(odiv);
+	    for(var i=0;i<ali.length;i++){
+	        ali[i].index = i;
+	        console.log(ali[i].index)
+	        ali[i].onclick = function(){
+	            for(var j=0;j<ali.length;j++){
+	            	ali[j].className = "l";
+					console.log(ali[j])
+	                odiv[j].style.display = "none";
+	              console.log(odiv[j])
+	            }
+	            this.className = "l active";
+	            odiv[this.index].style.display = "block"
+	        }
+	    }
+	</script>
+</html>

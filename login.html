@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <style type="text/css">
+    	.box{width: 500px;height: 300px;margin:auto;background: rgba(0,0,0,.1);overflow: hidden;}
+    	h1{text-align: center;}
+    	form{width:300px;margin: auto;}
+    	input{margin: 10px 0;}
+    	p{display: inline-block;width: 60px;text-align: right;}
+    	#regs{margin-left: 30px;border: none;background: #C3E6CB;width: 50px;height: 30px;box-shadow: 0px 0px 5px #CCC;}
+    	#btn{margin-left: 100px;border: none;background: #C3E6CB;width: 50px;height: 30px;box-shadow: 0px 0px 5px #CCC;}
+    	span{display:none;position: absolute;left: 600px;top: 80px;width: 150px;height: 150px;background: rgba(0,0,0,.1);text-align: center;line-height: 150px;}
+    </style>
+</head>
+<body>
+	<div class="box">
+		<h1>登录</h1>
+		<form action="" method="post">
+	       <p>用户名:</p>
+	       <input type="text" id="user"><br>
+	       <p>密码：</p>
+	       <input type="text" id="pass"><br>
+	    <input type="button" id="regs" value="注册" />
+	    <span id="msg"></span>
+	    <input type="button" value="登录" id="btn" />
+		</form>
+	</div>
+</body>
+<script src="js/ajax.3.0.js"></script>
+<script src="js/cookie.js"></script>
+<script>
+    function Register(options){
+        this.btn = options.btn
+        this.user = options.user
+        this.pass = options.pass
+        this.msg = options.msg
+        this.url = options.url
+      
+        this.regs = options.regs;
+
+        this.init()
+    }
+    Register.prototype.init = function(){
+        var that = this;
+        this.btn.onclick = function(){
+            that.load()
+        }
+        this.regs.onclick = function(){
+        	location.href = "regs.html"
+        }
+    }
+    Register.prototype.load = function(){
+        var that = this;
+        ajaxPost(this.url,{
+            user:this.user.value,
+            pass:this.pass.value
+        }).then(function(res){
+            switch(res){
+                case "0":
+                    that.msg.style.display = "block";
+                    that.msg.innerHTML = "用户名密码不符";
+                    setTimeout(function(){
+                    	that.msg.style.display = "none";
+                    	 that.msg.innerHTML = "";
+                    },3000)
+                    break;
+                case "1":
+                    that.msg.innerHTML = "登录失效，请重新登录";
+                    break;
+                default:
+                    that.msg.innerHTML = "登录成功"
+                    that.res  =JSON.parse(res);
+                    setCookie("user",that.user.value,7)
+                    location.href="index.html"
+                    console.log(that.res)
+            }
+        },function(code){
+            console.log("前端的ajax请求失败，有可能是网络原因或接口错误，或服务器问题，反正不一定是登录失败")
+        })
+    }
+
+
+
+    new Register({
+        btn:document.getElementById("btn"),
+        user:document.getElementById("user"),
+        pass:document.getElementById("pass"),
+        msg:document.getElementById("msg"),
+        regs:document.getElementById("regs"),
+        url:"http://www.liyangyf.com/ctrl/login.php"
+    })
+
+</script>
+</html>

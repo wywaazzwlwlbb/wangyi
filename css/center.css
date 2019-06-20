@@ -1,0 +1,19 @@
+.margin{width: 1180px;margin: auto;}
+header{height: 50px;}
+header .logo{float:left;line-height: 50px;}
+header .h-c{float: left;margin-left: 40px;line-height: 50px;}
+header .h-c span{margin: 0 20px;cursor: pointer;}
+header .h-c span.s1{font-weight:bold;color: rgb(194,40,48);}
+header .h-r{float: right;line-height: 50px;}
+#main{height: 500px;box-shadow: 0px -8px 5px -8px #CCC;}
+#main ul{margin: 50px 0 0 90px;width: 280px;float: left;}
+#main ul li{width: 280px;padding-left:50px;height: 70px;font: 20px/70px "";color: #333;background: #f2f2f2;margin-bottom: 5px;}
+#main ul li:hover{color: #c22830;border-left: 4px solid #C22830;cursor: pointer;}
+#main ul li.active{font-weight: 800;color: #c22830;border-left: 4px solid #C22830;}
+#main .div{width: 880px;float: left;margin: 50px 0 0 20px;}
+footer{height: 100px;text-align: center;}
+footer .f{margin:20px auto;line-height: 32px;width: 535px;}
+footer .f a{color: #666;font-size: 12px;text-decoration: none;}
+footer .f a:hover{color:#BD2130;}
+footer .f span{color: #999;}
+footer .f p{display: inline-block;color: #999;}
